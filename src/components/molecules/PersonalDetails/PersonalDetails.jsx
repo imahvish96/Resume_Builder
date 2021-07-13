@@ -59,7 +59,7 @@ export default function PersonalDetails() {
   };
 
   return (
-    <div>
+    <Box mb={4}>
       <Box mb={2}>
         <Typography variant='h6'>
           <strong>Payment method</strong>
@@ -208,6 +208,6 @@ export default function PersonalDetails() {
       <Button color='primary' onClick={showEditionalDetails}>
         Edit Editiional Details
       </Button>
-    </div>
+    </Box>
   );
 }

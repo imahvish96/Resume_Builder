@@ -1,9 +1,12 @@
 import React from 'react';
-import Link from '@material-ui/core/Link';
-import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 import StickyHeader from '../../molecules/Header/StickyHeader';
 import PersonalDetails from '../../molecules/PersonalDetails/PersonalDetails';
+import ProfessionalSummery from '../../molecules/ProfessionalSummery/ProfessionalSummery';
+import EmploymentHistory from '../../molecules/EmploymentHistory/Employment';
+import Education from '../../molecules/Education/Education';
+import SocialLinks from '../../molecules/SocialLinks/SocialLInks';
+import Skills from '../../molecules/Skills/Skills';
 
 const useStyles = makeStyles(theme => ({
   paper: {
@@ -27,6 +30,11 @@ const ResumeDetails = () => {
       <div className={classes.paper}>
         <form className={classes.form} noValidate>
           <PersonalDetails />
+          <ProfessionalSummery />
+          <EmploymentHistory />
+          <Education />
+          <SocialLinks />
+          <Skills />
         </form>
       </div>
     </>
