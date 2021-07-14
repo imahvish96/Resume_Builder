@@ -11,11 +11,26 @@ const useStyles = makeStyles(theme => ({
         : theme.palette.grey[900],
     backgroundSize: 'cover',
     backgroundPosition: 'center',
+    height: '100vh',
+    position: 'fixed',
+    right: '0px',
+    width: '50%',
+  },
+  resumeWrapper: {
+    background: '#fff',
+    width: '60%',
+    margin: '50px auto',
+    height: '84vh',
+    borderRadius: '8px ',
   },
 }));
 
 export default function SignInSide() {
   const classes = useStyles();
 
-  return <div item xs={false} sm={4} md={7} className={classes.image} />;
+  return (
+    <div item xs={false} sm={4} md={7} className={classes.image}>
+      <div className={classes.resumeWrapper} />
+    </div>
+  );
 }
