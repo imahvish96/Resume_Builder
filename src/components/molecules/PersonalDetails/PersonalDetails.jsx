@@ -69,9 +69,8 @@ export default function PersonalDetails() {
         <Grid container spacing={3}>
           <Grid item xs={12} md={6}>
             <TextField
-              required
               id='cardName'
-              label='Name on card'
+              label='Wanted Job Title'
               fullWidth
               autoComplete='cc-name'
               variant='filled'
@@ -85,9 +84,8 @@ export default function PersonalDetails() {
           </Grid>
           <Grid item xs={12} md={6}>
             <TextField
-              required
               id='expDate'
-              label='Expiry date'
+              label='First Name'
               fullWidth
               autoComplete='cc-exp'
               variant='filled'
@@ -95,9 +93,8 @@ export default function PersonalDetails() {
           </Grid>
           <Grid item xs={12} md={6}>
             <TextField
-              required
               id='cvv'
-              label='CVV'
+              label='Last Name'
               fullWidth
               autoComplete='cc-csc'
               variant='filled'
@@ -105,9 +102,8 @@ export default function PersonalDetails() {
           </Grid>
           <Grid item xs={12} md={6}>
             <TextField
-              required
               id='expDate'
-              label='Expiry date'
+              label='Email'
               fullWidth
               autoComplete='cc-exp'
               variant='filled'
@@ -115,9 +111,8 @@ export default function PersonalDetails() {
           </Grid>
           <Grid item xs={12} md={6}>
             <TextField
-              required
               id='cvv'
-              label='CVV'
+              label='Phone'
               fullWidth
               autoComplete='cc-csc'
               variant='filled'
@@ -125,9 +120,8 @@ export default function PersonalDetails() {
           </Grid>
           <Grid item xs={12} md={6}>
             <TextField
-              required
               id='expDate'
-              label='Expiry date'
+              label='Country'
               fullWidth
               autoComplete='cc-exp'
               variant='filled'
@@ -135,9 +129,8 @@ export default function PersonalDetails() {
           </Grid>
           <Grid item xs={12} md={6}>
             <TextField
-              required
               id='cvv'
-              label='CVV'
+              label='City'
               fullWidth
               autoComplete='cc-csc'
               variant='filled'
@@ -145,9 +138,8 @@ export default function PersonalDetails() {
           </Grid>
           <Grid item xs={12} md={6}>
             <TextField
-              required
               id='expDate'
-              label='Expiry date'
+              label='Address'
               fullWidth
               autoComplete='cc-exp'
               variant='filled'
@@ -155,9 +147,8 @@ export default function PersonalDetails() {
           </Grid>
           <Grid item xs={12} md={6}>
             <TextField
-              required
               id='cvv'
-              label='CVV'
+              label='Postal Code'
               fullWidth
               autoComplete='cc-csc'
               variant='filled'
@@ -165,9 +156,8 @@ export default function PersonalDetails() {
           </Grid>
           <Grid item xs={12} md={6}>
             <TextField
-              required
               id='expDate'
-              label='Expiry date'
+              label='Driving License'
               fullWidth
               autoComplete='cc-exp'
               variant='filled'
@@ -175,9 +165,8 @@ export default function PersonalDetails() {
           </Grid>
           <Grid item xs={12} md={6}>
             <TextField
-              required
               id='cvv'
-              label='CVV'
+              label='Nationality'
               fullWidth
               autoComplete='cc-csc'
               variant='filled'
@@ -185,9 +174,8 @@ export default function PersonalDetails() {
           </Grid>
           <Grid item xs={12} md={6}>
             <TextField
-              required
               id='expDate'
-              label='Expiry date'
+              label='Place of Birth'
               fullWidth
               autoComplete='cc-exp'
               variant='filled'
@@ -195,9 +183,8 @@ export default function PersonalDetails() {
           </Grid>
           <Grid item xs={12} md={6}>
             <TextField
-              required
               id='cvv'
-              label='CVV'
+              label='Date of Birth'
               fullWidth
               autoComplete='cc-csc'
               variant='filled'

@@ -61,27 +61,24 @@ export default function Education() {
             <Grid container spacing={3}>
               <Grid item xs={12} md={6}>
                 <TextField
-                  required
-                  id='cardName'
-                  label='Name on card'
+                  id='school'
+                  label='School'
                   fullWidth
-                  autoComplete='cc-name'
+                  autoComplete='job-title'
                   variant='filled'
                 />
               </Grid>
               <Grid item xs={12} md={6}>
                 <TextField
-                  required
-                  id='expDate'
-                  label='Expiry date'
+                  id='degree'
+                  label='Degree'
                   fullWidth
-                  autoComplete='cc-exp'
+                  autoComplete='emp'
                   variant='filled'
                 />
               </Grid>
               <Grid item xs={12} md={6}>
                 <TextField
-                  required
                   id='cvv'
                   label='CVV'
                   fullWidth
@@ -91,9 +88,8 @@ export default function Education() {
               </Grid>
               <Grid item xs={12} md={6}>
                 <TextField
-                  required
-                  id='expDate'
-                  label='Expiry date'
+                  id='city'
+                  label='City'
                   fullWidth
                   autoComplete='cc-exp'
                   variant='filled'
@@ -101,8 +97,7 @@ export default function Education() {
               </Grid>
               <Grid item xs={12} md={12}>
                 <TextField
-                  required
-                  label='Name on card'
+                  label='Description'
                   fullWidth
                   autoComplete='cc-name'
                   variant='filled'

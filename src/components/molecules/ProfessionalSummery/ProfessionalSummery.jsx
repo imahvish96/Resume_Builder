@@ -38,8 +38,6 @@ export default function ProfessionalSummery() {
         <Grid container spacing={3}>
           <Grid item xs={12} md={12}>
             <TextField
-              required
-              label='Name on card'
               fullWidth
               autoComplete='cc-name'
               variant='filled'

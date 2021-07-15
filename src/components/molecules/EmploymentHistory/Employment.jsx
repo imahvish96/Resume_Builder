@@ -62,27 +62,24 @@ export default function EmploymentHistory() {
             <Grid container spacing={3}>
               <Grid item xs={12} md={6}>
                 <TextField
-                  required
-                  id='cardName'
-                  label='Name on card'
+                  id='jobTitle'
+                  label='Job Title'
                   fullWidth
-                  autoComplete='cc-name'
+                  autoComplete='job-title'
                   variant='filled'
                 />
               </Grid>
               <Grid item xs={12} md={6}>
                 <TextField
-                  required
-                  id='expDate'
-                  label='Expiry date'
+                  id='employer'
+                  label='Employer'
                   fullWidth
-                  autoComplete='cc-exp'
+                  autoComplete='emp'
                   variant='filled'
                 />
               </Grid>
               <Grid item xs={12} md={6}>
                 <TextField
-                  required
                   id='cvv'
                   label='CVV'
                   fullWidth
@@ -92,9 +89,8 @@ export default function EmploymentHistory() {
               </Grid>
               <Grid item xs={12} md={6}>
                 <TextField
-                  required
-                  id='expDate'
-                  label='Expiry date'
+                  id='city'
+                  label='City'
                   fullWidth
                   autoComplete='cc-exp'
                   variant='filled'
@@ -102,8 +98,7 @@ export default function EmploymentHistory() {
               </Grid>
               <Grid item xs={12} md={12}>
                 <TextField
-                  required
-                  label='Name on card'
+                  label='Description'
                   fullWidth
                   autoComplete='cc-name'
                   variant='filled'

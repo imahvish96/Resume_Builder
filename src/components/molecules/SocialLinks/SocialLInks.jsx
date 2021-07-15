@@ -62,9 +62,8 @@ export default function Education() {
             <Grid container spacing={3}>
               <Grid item xs={12} md={6}>
                 <TextField
-                  required
-                  id='cardName'
-                  label='Name on card'
+                  id='Label'
+                  label='Label'
                   fullWidth
                   autoComplete='cc-name'
                   variant='filled'
@@ -72,45 +71,11 @@ export default function Education() {
               </Grid>
               <Grid item xs={12} md={6}>
                 <TextField
-                  required
-                  id='expDate'
-                  label='Expiry date'
+                  id='links'
+                  label='Links'
                   fullWidth
                   autoComplete='cc-exp'
                   variant='filled'
-                />
-              </Grid>
-              <Grid item xs={12} md={6}>
-                <TextField
-                  required
-                  id='cvv'
-                  label='CVV'
-                  fullWidth
-                  autoComplete='cc-csc'
-                  variant='filled'
-                />
-              </Grid>
-              <Grid item xs={12} md={6}>
-                <TextField
-                  required
-                  id='expDate'
-                  label='Expiry date'
-                  fullWidth
-                  autoComplete='cc-exp'
-                  variant='filled'
-                />
-              </Grid>
-              <Grid item xs={12} md={12}>
-                <TextField
-                  required
-                  label='Name on card'
-                  fullWidth
-                  autoComplete='cc-name'
-                  variant='filled'
-                  id='filled-multiline-static'
-                  multiline
-                  rows={10}
-                  defaultValue='The quick brown fox jump over the little lazy dog. Committed to utilizing my skills to further the mission of a company. Adept in various social media platforms and office technology programs. Bringing forth a motivated attitude and a variety of powerful skills. Adept in general accounting and finance transactions. Dedicated Customer Service Representative dedicated to providing quality care for ultimate customer satisfaction.'
                 />
               </Grid>
             </Grid>
