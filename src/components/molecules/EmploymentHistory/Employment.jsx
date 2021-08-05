@@ -64,47 +64,57 @@ export default function EmploymentHistory() {
                 <TextField
                   id='jobTitle'
                   label='Job Title'
+                  name='job_title'
                   fullWidth
                   autoComplete='job-title'
                   variant='filled'
+                  data-test-id='employment_History'
                 />
               </Grid>
               <Grid item xs={12} md={6}>
                 <TextField
                   id='employer'
+                  name='employer'
                   label='Employer'
                   fullWidth
                   autoComplete='emp'
                   variant='filled'
+                  data-test-id='employment_History'
                 />
               </Grid>
               <Grid item xs={12} md={6}>
                 <TextField
                   id='cvv'
                   label='CVV'
+                  name='date'
                   fullWidth
                   autoComplete='cc-csc'
                   variant='filled'
+                  data-test-id='employment_History'
                 />
               </Grid>
               <Grid item xs={12} md={6}>
                 <TextField
                   id='city'
                   label='City'
+                  name='city'
                   fullWidth
                   autoComplete='cc-exp'
                   variant='filled'
+                  data-test-id='employment_History'
                 />
               </Grid>
               <Grid item xs={12} md={12}>
                 <TextField
                   label='Description'
+                  name='description'
                   fullWidth
                   autoComplete='cc-name'
                   variant='filled'
                   id='filled-multiline-static'
                   multiline
                   rows={10}
+                  data-test-id='employment_History'
                   defaultValue='The quick brown fox jump over the little lazy dog. Committed to utilizing my skills to further the mission of a company. Adept in various social media platforms and office technology programs. Bringing forth a motivated attitude and a variety of powerful skills. Adept in general accounting and finance transactions. Dedicated Customer Service Representative dedicated to providing quality care for ultimate customer satisfaction.'
                 />
               </Grid>

@@ -62,132 +62,158 @@ export default function PersonalDetails() {
     <Box mb={4}>
       <Box mb={2}>
         <Typography variant='h6'>
-          <strong>Payment method</strong>
+          <strong>Personal Details</strong>
         </Typography>
       </Box>
       <Collapse Collapse in={checked} collapsedSize={230}>
         <Grid container spacing={3}>
           <Grid item xs={12} md={6}>
             <TextField
-              id='cardName'
+              id='personalDetails_cardName'
+              name='job_title'
               label='Wanted Job Title'
               fullWidth
               autoComplete='cc-name'
               variant='filled'
+              data-test-id='personal_details'
             />
           </Grid>
           <Grid item xs={12} md={6}>
             <Button variant='contained' component='label'>
               Upload File
-              <input type='file' hidden />
+              <input type='file' name='profile' hidden />
             </Button>
           </Grid>
           <Grid item xs={12} md={6}>
             <TextField
-              id='expDate'
+              id='first_name'
+              name='first_name'
               label='First Name'
               fullWidth
               autoComplete='cc-exp'
               variant='filled'
+              data-test-id='personal_details'
             />
           </Grid>
           <Grid item xs={12} md={6}>
             <TextField
-              id='cvv'
+              id='last_name'
+              name='last_name'
               label='Last Name'
               fullWidth
               autoComplete='cc-csc'
               variant='filled'
+              data-test-id='personal_details'
             />
           </Grid>
           <Grid item xs={12} md={6}>
             <TextField
-              id='expDate'
+              id='email'
+              name='email'
               label='Email'
               fullWidth
               autoComplete='cc-exp'
               variant='filled'
+              data-test-id='personal_details'
             />
           </Grid>
           <Grid item xs={12} md={6}>
             <TextField
-              id='cvv'
+              id='phone'
+              name='phone'
               label='Phone'
               fullWidth
               autoComplete='cc-csc'
               variant='filled'
+              data-test-id='personal_details'
             />
           </Grid>
           <Grid item xs={12} md={6}>
             <TextField
-              id='expDate'
+              id='country'
+              name='country'
               label='Country'
               fullWidth
               autoComplete='cc-exp'
               variant='filled'
+              data-test-id='personal_details'
             />
           </Grid>
           <Grid item xs={12} md={6}>
             <TextField
-              id='cvv'
+              id='city'
+              name='city'
               label='City'
               fullWidth
               autoComplete='cc-csc'
               variant='filled'
+              data-test-id='personal_details'
             />
           </Grid>
           <Grid item xs={12} md={6}>
             <TextField
-              id='expDate'
+              id='address'
+              name='address'
               label='Address'
               fullWidth
               autoComplete='cc-exp'
               variant='filled'
+              data-test-id='personal_details'
             />
           </Grid>
           <Grid item xs={12} md={6}>
             <TextField
-              id='cvv'
+              id='postal_code'
+              name='postal_code'
               label='Postal Code'
               fullWidth
               autoComplete='cc-csc'
               variant='filled'
+              data-test-id='personal_details'
             />
           </Grid>
           <Grid item xs={12} md={6}>
             <TextField
-              id='expDate'
+              id='driving_license'
+              name='driving_license'
               label='Driving License'
               fullWidth
               autoComplete='cc-exp'
               variant='filled'
+              data-test-id='personal_details'
             />
           </Grid>
           <Grid item xs={12} md={6}>
             <TextField
-              id='cvv'
+              id='nationality'
+              name='nationality'
               label='Nationality'
               fullWidth
               autoComplete='cc-csc'
               variant='filled'
+              data-test-id='personal_details'
             />
           </Grid>
           <Grid item xs={12} md={6}>
             <TextField
-              id='expDate'
+              id='place_of_birth'
+              name='place_of_birth'
               label='Place of Birth'
               fullWidth
               autoComplete='cc-exp'
               variant='filled'
+              data-test-id='personal_details'
             />
           </Grid>
           <Grid item xs={12} md={6}>
             <TextField
-              id='cvv'
+              id='dob'
+              name='dob'
               label='Date of Birth'
               fullWidth
               autoComplete='cc-csc'
               variant='filled'
+              data-test-id='personal_details'
             />
           </Grid>
         </Grid>

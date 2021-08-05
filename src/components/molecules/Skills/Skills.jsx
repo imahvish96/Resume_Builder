@@ -32,11 +32,13 @@ export default function Education() {
       <Box>
         <ChipInput
           label='Skills'
+          name='skills'
           value={chips}
           onAdd={chip => handleAddChip(chip)}
           onDelete={(chip, index) => handleDeleteChip(chip, index)}
           variant='filled'
           fullWidth
+          data-test-id='skills'
         />
       </Box>
     </Box>

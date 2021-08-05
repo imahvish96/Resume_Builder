@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Box, Typography, Divider } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
+import { ResumeContext } from '../../../Context';
 
 const useStyles = makeStyles(theme => ({
   userName: {
@@ -28,11 +29,18 @@ const useStyles = makeStyles(theme => ({
 
 export default function IntrestsView() {
   const classes = useStyles();
+  const {
+    about: { first_name, last_name, job_title },
+  } = useContext(ResumeContext);
   return (
-    <Box className={classes.userName}>
-      <h1>WHITE</h1>
-      <h4>WALKER</h4>
-      <span>WEB DEVELOPER</span>
-    </Box>
+    <div>
+      {first_name && (
+        <Box className={classes.userName}>
+          <h1>{first_name}</h1>
+          <h4>{last_name}</h4>
+          <span>{job_title}</span>
+        </Box>
+      )}
+    </div>
   );
 }

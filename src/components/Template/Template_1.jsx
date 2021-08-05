@@ -1,7 +1,6 @@
-import React, { useEffect } from 'react';
+import React, { useContext } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Divider from '@material-ui/core/Divider';
-import Typography from '@material-ui/core/Typography';
 import Box from '@material-ui/core/Box';
 import About from '../molecules/AboutView/About';
 import Name from '../molecules/NameAndProfile/Name';
@@ -11,6 +10,7 @@ import Employment from '../molecules/EmploymentView/EmploymentView';
 import Contact from '../molecules/ContactView/ContactView';
 import Intrests from '../molecules/IntrestsView/IntrestsView';
 import Skills from '../molecules/SkillsView/SkillsView';
+import { ResumeContext } from '../../Context';
 import './Style.css';
 
 const useStyles = makeStyles(theme => ({
@@ -31,15 +31,24 @@ const useStyles = makeStyles(theme => ({
 
 export default function Template_1(props) {
   const classes = useStyles();
+  const { about } = useContext(ResumeContext);
 
   return (
     <div style={{ display: 'flex', margin: '0px 0 10px' }} id='content'>
       <Box className={classes.sidebar}>
         <Profile />
-        <Name />
-        <Divider
-          style={{ background: '#eee', margin: '4px auto', width: '20px' }}
-        />
+        {about.first_name && (
+          <>
+            <Name />
+            <Divider
+              style={{
+                background: '#eee',
+                margin: '4px auto',
+                width: '20px',
+              }}
+            />
+          </>
+        )}
         <Contact />
         <Intrests />
         <Skills />

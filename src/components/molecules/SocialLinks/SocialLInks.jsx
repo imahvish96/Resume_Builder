@@ -67,6 +67,8 @@ export default function Education() {
                   fullWidth
                   autoComplete='cc-name'
                   variant='filled'
+                  data-test-id='social_Link'
+                  name='label'
                 />
               </Grid>
               <Grid item xs={12} md={6}>
@@ -76,6 +78,8 @@ export default function Education() {
                   fullWidth
                   autoComplete='cc-exp'
                   variant='filled'
+                  data-test-id='social_Link'
+                  name='links'
                 />
               </Grid>
             </Grid>

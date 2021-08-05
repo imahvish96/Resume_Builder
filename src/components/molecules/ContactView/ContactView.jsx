@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Box, Typography, Divider } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
+import { ResumeContext } from '../../../Context';
 
 const useStyles = makeStyles(theme => ({
   about: {
@@ -31,19 +32,30 @@ const useStyles = makeStyles(theme => ({
 
 export default function ContactView() {
   const classes = useStyles();
+  const {
+    about,
+    social: { link, label },
+  } = useContext(ResumeContext);
+  const { address, email, phone } = about;
   return (
-    <div>
-      <div className={classes.about}>
-        <div className={classes.aboutTitle}>
-          <span>CONTACT ME</span>
+    <>
+      {about && about.address ? (
+        <div>
+          <div className={classes.about}>
+            <div className={classes.aboutTitle}>
+              <span>CONTACT ME</span>
+            </div>
+            <div className={classes.aboutme}>
+              {address && <div>Address: {address}</div>}
+              {phone && <div>Phone: {phone}</div>}
+              {email && <div>Email: {email}</div>}
+              {link && <div>Link: {link}</div>}
+            </div>
+          </div>
         </div>
-        <div className={classes.aboutme}>
-          <div>Address: New York, America</div>
-          <div>Phone: +91 9999-88-88</div>
-          <div>Email: white009@gmail.com</div>
-          <div>Link: www.whitewalker.com</div>
-        </div>
-      </div>
-    </div>
+      ) : (
+        ''
+      )}
+    </>
   );
 }
