@@ -8,7 +8,7 @@ export default function Education() {
     <Box mb={5}>
       <Box mb={1}>
         <Typography variant='h6'>
-          <strong>Skills</strong>
+          <strong>Intrests</strong>
         </Typography>
       </Box>
       <Box>

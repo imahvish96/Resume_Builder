@@ -18,9 +18,11 @@ const useStyles = makeStyles(theme => ({
   },
   saveIcon: {
     width: '33.3%',
+    color: '#fff',
   },
   change: {
     width: '33.3%',
+    color: '#fff',
   },
 }));
 
@@ -31,7 +33,7 @@ export default function ResumeHeader() {
       <div className={classes.resumeHeader}>
         <div className={classes.header}>
           <div className={classes.saveIcon}>
-            <i class='fas fa-cloud-download-alt'></i> Save
+            <i class='fas fa-cloud-download-alt'></i> &nbsp; Save
           </div>
           <div className={classes.change}>
             <i class='fas fa-chevron-left'></i> 1/1 &nbsp;

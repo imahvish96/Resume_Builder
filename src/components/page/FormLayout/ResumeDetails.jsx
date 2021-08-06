@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import StickyHeader from '../../molecules/Header/StickyHeader';
 import PersonalDetails from '../../molecules/PersonalDetails/PersonalDetails';
@@ -7,7 +7,6 @@ import EmploymentHistory from '../../molecules/EmploymentHistory/Employment';
 import Education from '../../molecules/Education/Education';
 import SocialLinks from '../../molecules/SocialLinks/SocialLInks';
 import Skills from '../../molecules/Skills/Skills';
-import data from '../../../resume';
 
 const useStyles = makeStyles(theme => ({
   paper: {

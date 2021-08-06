@@ -1,9 +1,8 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import ResumeHeader from '../../atoms/ResumeHeader';
 import ResumeFooter from '../../atoms/ResumeFooter';
 import Template1 from '../../Template/Template_1';
-import mockData from '../../../resume';
 
 const useStyles = makeStyles(theme => ({
   image: {
@@ -26,7 +25,6 @@ const useStyles = makeStyles(theme => ({
 export default function SignInSide(props) {
   const classes = useStyles();
   const [state, setState] = React.useState([1]);
-  const [data, setData] = React.useState(mockData);
 
   return (
     <div item xs={false} sm={4} md={7} className={classes.image}>

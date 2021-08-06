@@ -50,7 +50,6 @@ export default function Template_1(props) {
           </>
         )}
         <Contact />
-        <Intrests />
         <Skills />
       </Box>
       <Box className={classes.main}>

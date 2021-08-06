@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Box, Typography, Divider } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
+import { ResumeContext } from '../../../Context';
 
 const useStyles = makeStyles(theme => ({
   about: {
@@ -31,20 +32,21 @@ const useStyles = makeStyles(theme => ({
 
 export default function SkillsView() {
   const classes = useStyles();
+  const { skills } = useContext(ResumeContext);
+  console.log(skills);
   return (
-    <div>
-      <div className={classes.about}>
-        <div className={classes.aboutTitle}>
-          <span>SKILLS</span>
+    <>
+      {skills && skills.length > 0 && (
+        <div className={classes.about}>
+          <div className={classes.aboutTitle}>
+            <span>SKILLS</span>
+          </div>
+          <div className={classes.aboutme}>
+            {skills &&
+              skills.map(skill => <span>{skill} &nbsp; | &nbsp;</span>)}
+          </div>
         </div>
-        <div className={classes.aboutme}>
-          <span>
-            Photoshop &nbsp;|&nbsp; CorelDraw &nbsp;|&nbsp; illustator
-            &nbsp;|&nbsp; HTML &nbsp;|&nbsp; Javascript &nbsp;|&nbsp; Python
-            &nbsp;|&nbsp; React &nbsp;|&nbsp; Redux
-          </span>
-        </div>
-      </div>
-    </div>
+      )}
+    </>
   );
 }

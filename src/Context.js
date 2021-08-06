@@ -7,7 +7,7 @@ const Context = props => {
   const [about, setAbout] = useState({}); // about: {[e.target.name]: value,  }
   const [exp, setExp] = useState({});
   const [edu, setEdu] = useState({});
-  const [skills, setSkills] = useState({});
+  const [skills, setSkills] = useState([]);
   const [social, setSocial] = useState({});
 
   const onFormChange = e => {
@@ -28,16 +28,13 @@ const Context = props => {
       case 'social_Link':
         setSocial({ ...social, [e.target.name]: e.target.value });
         break;
-      case 'skills':
-        setSkills({ ...skills, [e.target.name]: e.target.value });
-        break;
       default:
         console.log('noting found!!');
     }
   };
-
   return (
-    <ResumeProvider value={{ about, edu, exp, skills, social, onFormChange }}>
+    <ResumeProvider
+      value={{ about, edu, exp, skills, social, onFormChange, setSkills }}>
       {props.children}
     </ResumeProvider>
   );
