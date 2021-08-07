@@ -37,7 +37,7 @@ export default function Template_1(props) {
     <div style={{ display: 'flex', margin: '0px 0 10px' }} id='content'>
       <Box className={classes.sidebar}>
         <Profile />
-        {about.first_name && (
+        {(about.first_name || about.last_name || about.job_title) && (
           <>
             <Name />
             <Divider

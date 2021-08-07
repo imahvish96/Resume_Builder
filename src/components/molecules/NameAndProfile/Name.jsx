@@ -34,7 +34,7 @@ export default function IntrestsView() {
   } = useContext(ResumeContext);
   return (
     <div>
-      {first_name && (
+      {(first_name || last_name || job_title) && (
         <Box className={classes.userName}>
           <h1>{first_name}</h1>
           <h4>{last_name}</h4>
