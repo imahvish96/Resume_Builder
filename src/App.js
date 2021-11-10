@@ -1,4 +1,3 @@
-import './App.css';
 import SidebarLayout from './components/Layout/SidebarLayout';
 import Context from './Context';
 function App() {

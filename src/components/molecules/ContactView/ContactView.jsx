@@ -36,25 +36,32 @@ export default function ContactView() {
     about,
     social: { link, label },
   } = useContext(ResumeContext);
-  const { address, email, phone } = about;
+  const { address, email, phone, city, country, postal_code } = about;
+  console.log(address);
   return (
     <>
-      {about && about.address ? (
+      {about && (
         <div>
           <div className={classes.about}>
-            <div className={classes.aboutTitle}>
-              <span>CONTACT ME</span>
-            </div>
-            <div className={classes.aboutme}>
-              {address && <div>Address: {address}</div>}
-              {phone && <div>Phone: {phone}</div>}
-              {email && <div>Email: {email}</div>}
-              {link && <div>Link: {link}</div>}
-            </div>
+            {(address || country || email || phone) && (
+              <>
+                <div className={classes.aboutTitle}>
+                  <span>CONTACT ME</span>
+                </div>
+                <div className={classes.aboutme}>
+                  {(address || country || city) && (
+                    <div>
+                      Address: {address}, {country}, {city}, {postal_code}
+                    </div>
+                  )}
+                  {phone && <div>Phone: {phone}</div>}
+                  {email && <div>Email: {email}</div>}
+                  {link && <div>Link: {link}</div>}
+                </div>
+              </>
+            )}
           </div>
         </div>
-      ) : (
-        ''
       )}
     </>
   );

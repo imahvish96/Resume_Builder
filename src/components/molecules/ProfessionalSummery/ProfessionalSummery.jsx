@@ -38,15 +38,15 @@ export default function ProfessionalSummery() {
         <Grid container spacing={3}>
           <Grid item xs={12} md={12}>
             <TextField
+              label='Description'
               fullWidth
               autoComplete='cc-name'
               variant='filled'
               name='description'
               id='filled-multiline-static'
               multiline
-              rows={10}
+              rows={5}
               data-test-id='professional_Summery'
-              defaultValue='The quick brown fox jump over the little lazy dog. Committed to utilizing my skills to further the mission of a company. Adept in various social media platforms and office technology programs. Bringing forth a motivated attitude and a variety of powerful skills. Adept in general accounting and finance transactions. Dedicated Customer Service Representative dedicated to providing quality care for ultimate customer satisfaction.'
             />
           </Grid>
         </Grid>

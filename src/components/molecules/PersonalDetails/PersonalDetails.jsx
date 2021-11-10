@@ -191,17 +191,6 @@ export default function PersonalDetails() {
           </Grid>
           <Grid item xs={12} md={6}>
             <TextField
-              id='driving_license'
-              name='driving_license'
-              label='Driving License'
-              fullWidth
-              autoComplete='cc-exp'
-              variant='filled'
-              data-test-id='personal_details'
-            />
-          </Grid>
-          <Grid item xs={12} md={6}>
-            <TextField
               id='nationality'
               name='nationality'
               label='Nationality'

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import Button from '@material-ui/core/Button';
 import TextField from '@material-ui/core/TextField';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
@@ -14,6 +14,7 @@ import Accordion from '@material-ui/core/Accordion';
 import AccordionSummary from '@material-ui/core/AccordionSummary';
 import AccordionDetails from '@material-ui/core/AccordionDetails';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
+import { ResumeContext } from '../../../Context';
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -31,13 +32,100 @@ const useStyles = makeStyles(theme => ({
   },
 }));
 
-export default function Education() {
+const EducationInfo = ({ index }) => {
   const classes = useStyles();
-  const [checked, setChecked] = React.useState(false);
+  const { edu } = useContext(ResumeContext);
+  return (
+    <Box mb={2}>
+      <Accordion>
+        <AccordionSummary
+          expandIcon={<ExpandMoreIcon />}
+          aria-controls='panel1a-content'
+          id='panel1a-header'>
+          <Typography className={classes.heading}>
+            {edu.school ? edu.school : '(Not Specified)'}
+          </Typography>
+          &nbsp;
+          <Typography variant='subtitle2'>{edu.date}</Typography>
+        </AccordionSummary>
+        <AccordionDetails>
+          <Grid container spacing={3}>
+            <Grid item xs={12} md={6}>
+              <TextField
+                id='school'
+                label='School'
+                name='school'
+                fullWidth
+                autoComplete='job-title'
+                variant='filled'
+                data-index={index}
+                data-test-id='education'
+              />
+            </Grid>
+            <Grid item xs={12} md={6}>
+              <TextField
+                id='degree'
+                label='Degree'
+                name='degree'
+                fullWidth
+                autoComplete='emp'
+                variant='filled'
+                data-index={index}
+                data-test-id='education'
+              />
+            </Grid>
+            <Grid item xs={12} md={6}>
+              <TextField
+                id='year'
+                label='Year'
+                name='date'
+                fullWidth
+                autoComplete='cc-csc'
+                variant='filled'
+                data-index={index}
+                data-test-id='education'
+              />
+            </Grid>
+            <Grid item xs={12} md={6}>
+              <TextField
+                id='city'
+                label='City'
+                name='city'
+                fullWidth
+                autoComplete='cc-exp'
+                variant='filled'
+                data-index={index}
+                data-test-id='education'
+              />
+            </Grid>
+            <Grid item xs={12} md={12}>
+              <TextField
+                label='Description'
+                fullWidth
+                autoComplete='cc-name'
+                variant='filled'
+                id='filled-multiline-static'
+                multiline
+                rows={10}
+                data-index={index}
+                data-test-id='education'
+                name='description'
+              />
+            </Grid>
+          </Grid>
+        </AccordionDetails>
+      </Accordion>
+    </Box>
+  );
+};
 
-  const showEditionalDetails = () => {
-    setChecked(prev => !prev);
+export default function Education() {
+  const { edu, setEdu } = useContext(ResumeContext);
+
+  const createNewEmp = () => {
+    setEdu([...edu, {}]);
   };
+
   return (
     <Box mb={5}>
       <Box mb={2}>
@@ -48,80 +136,10 @@ export default function Education() {
           If relevant, include your most recent educational achievements here.
         </Typography>
       </Box>
-      <Box>
-        <Accordion>
-          <AccordionSummary
-            expandIcon={<ExpandMoreIcon />}
-            aria-controls='panel1a-content'
-            id='panel1a-header'>
-            <Typography className={classes.heading}>(Not Specified)</Typography>
-            <Typography variant='subtitle2'>Jul 2021 - Jul 2021</Typography>
-          </AccordionSummary>
-          <AccordionDetails>
-            <Grid container spacing={3}>
-              <Grid item xs={12} md={6}>
-                <TextField
-                  id='school'
-                  label='School'
-                  name='school'
-                  fullWidth
-                  autoComplete='job-title'
-                  variant='filled'
-                  data-test-id='education'
-                />
-              </Grid>
-              <Grid item xs={12} md={6}>
-                <TextField
-                  id='degree'
-                  label='Degree'
-                  name='degree'
-                  fullWidth
-                  autoComplete='emp'
-                  variant='filled'
-                  data-test-id='education'
-                />
-              </Grid>
-              <Grid item xs={12} md={6}>
-                <TextField
-                  id='cvv'
-                  label='CVV'
-                  name='date'
-                  fullWidth
-                  autoComplete='cc-csc'
-                  variant='filled'
-                  data-test-id='education'
-                />
-              </Grid>
-              <Grid item xs={12} md={6}>
-                <TextField
-                  id='city'
-                  label='City'
-                  name='city'
-                  fullWidth
-                  autoComplete='cc-exp'
-                  variant='filled'
-                  data-test-id='education'
-                />
-              </Grid>
-              <Grid item xs={12} md={12}>
-                <TextField
-                  label='Description'
-                  fullWidth
-                  autoComplete='cc-name'
-                  variant='filled'
-                  id='filled-multiline-static'
-                  multiline
-                  rows={10}
-                  data-test-id='education'
-                  name='description'
-                  defaultValue='The quick brown fox jump over the little lazy dog. Committed to utilizing my skills to further the mission of a company. Adept in various social media platforms and office technology programs. Bringing forth a motivated attitude and a variety of powerful skills. Adept in general accounting and finance transactions. Dedicated Customer Service Representative dedicated to providing quality care for ultimate customer satisfaction.'
-                />
-              </Grid>
-            </Grid>
-          </AccordionDetails>
-        </Accordion>
-      </Box>
-      <Button color='primary' onClick={showEditionalDetails}>
+      {edu.map((item, index) => (
+        <EducationInfo index={index} />
+      ))}
+      <Button color='primary' onClick={createNewEmp}>
         Add Education
       </Button>
     </Box>
